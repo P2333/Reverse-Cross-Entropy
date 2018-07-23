@@ -16,7 +16,7 @@ We provide codes for training [ResNet](https://github.com/tensorflow/models/tree
 
 <b>How to run:</b>
 
-An example of using RCE to train a ResNet-32 on MNIST is
+An example of using RCE to train a ResNet-32 on MNIST:
 
 ```shell
 python train.py --train_data_path='mnist_dataset/data_train.bin' \
@@ -32,3 +32,16 @@ python train.py --train_data_path='mnist_dataset/data_train.bin' \
 ```
 
 ## Test in the Normal Setting
+
+An example of test trained ResNet-32 in the normal setting (test set) on MNIST:
+
+```shell
+python test_nor.py --eval_data_path='mnist_dataset/data_test.bin' \
+                --log_root=models_mnist/resnet32 \
+                --eval_dir=models_mnist/resnet32/eval \
+                --dataset='mnist' \
+                --num_gpus=1 \
+                --num_residual_units=5 \
+                --mode=eval \
+                --RCE_train=True
+```
