@@ -12,7 +12,7 @@ We provide codes for training [ResNet](https://github.com/tensorflow/models/tree
 <b>Prerequisite:</b>
 1. Install TensorFlow 1.9.0.
 
-2. Download MNIST/CIFAR-10 dataset.
+2. Download [MNIST](http://ml.cs.tsinghua.edu.cn/~tianyu/mnist_dataset.zip)/[CIFAR-10](http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz) dataset.
 
 <b>How to run:</b>
 
