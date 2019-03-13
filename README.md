@@ -2,7 +2,7 @@
 Reverse Cross Entropy Training (RCE) is a novel training method, which can learn more distinguished feature representations for detecting adversarial examples.
 Technical details are specified in:
 
-[Towards Robust Detection of Adversarial Examples](http://arxiv.org/abs/1706.00633)
+[Towards Robust Detection of Adversarial Examples](http://papers.nips.cc/paper/7709-towards-robust-detection-of-adversarial-examples.pdf) (NeurIPS 2018)
 
 Tianyu Pang, Chao Du, Yinpeng Dong and Jun Zhu
 
