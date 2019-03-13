@@ -10,7 +10,7 @@ Tianyu Pang, Chao Du, Yinpeng Dong and Jun Zhu
 We provide codes for training [ResNet](https://github.com/tensorflow/models/tree/master/research/resnet) on MNIST and CIFAR-10. Our codes are based on [Tensorflow](https://github.com/tensorflow). 
 
 <b>Prerequisite:</b>
-1. Install TensorFlow.
+1. Install TensorFlow 1.9.0.
 
 2. Download MNIST/CIFAR-10 dataset.
 
