@@ -170,7 +170,7 @@ def main(_):
                              lrn_rate=0.1,
                              num_residual_units=FLAGS.num_residual_units,
                              use_bottleneck=False,
-                             weight_decay_rate=0.000,
+                             weight_decay_rate=0.0002,
                              relu_leakiness=0.1,
                              optimizer=FLAGS.Optimizer,
                              RCE_train=FLAGS.RCE_train)
@@ -181,7 +181,7 @@ def main(_):
                            lrn_rate=0.1,
                            num_residual_units=FLAGS.num_residual_units,
                            use_bottleneck=False,
-                           weight_decay_rate=0.000,
+                           weight_decay_rate=0.0002,
                            relu_leakiness=0.1,
                            optimizer=FLAGS.Optimizer,
                            RCE_train=FLAGS.RCE_train)
