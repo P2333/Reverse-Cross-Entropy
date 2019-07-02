@@ -45,3 +45,5 @@ python test_nor.py --eval_data_path='mnist_dataset/data_test.bin' \
                 --mode=eval \
                 --RCE_train=True
 ```
+
+The code of attacks is forked from [Zhitao Gong](https://github.com/gongzhitaao/tensorflow-adversarial)
