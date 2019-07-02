@@ -46,4 +46,23 @@ python test_nor.py --eval_data_path='mnist_dataset/data_test.bin' \
                 --RCE_train=True
 ```
 
+## Test in the Adversarial Setting
+
 The code of attacks is forked from [Zhitao Gong](https://github.com/gongzhitaao/tensorflow-adversarial)
+
+An example of attacking a trained Resnet-32 by FGSM on MNIST:
+
+```shell
+python test_adv.py --eval_data_path='cifar10_dataset/test_batch.bin' \
+                               --log_root=models_mnist/resnet32 \
+                               --dataset='mnist' \
+                               --num_gpus=1 \
+                               --num_residual_units=5 \
+                               --Optimizer='mom' \
+                               --mode=attack \
+                               --RCE_train=True \
+                               --attack_method='fgsm' \
+                               --eval_batch_count=5
+```
+
+The `attack_method` 
