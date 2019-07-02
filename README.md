@@ -53,7 +53,7 @@ The code of attacks is forked from [Zhitao Gong](https://github.com/gongzhitaao/
 An example of attacking a trained Resnet-32 by FGSM on MNIST:
 
 ```shell
-python test_adv.py --eval_data_path='cifar10_dataset/test_batch.bin' \
+python test_adv.py --eval_data_path='mnist_dataset/test_batch.bin' \
                                --log_root=models_mnist/resnet32 \
                                --dataset='mnist' \
                                --num_gpus=1 \
@@ -65,4 +65,26 @@ python test_adv.py --eval_data_path='cifar10_dataset/test_batch.bin' \
                                --eval_batch_count=5
 ```
 
-The `attack_method` 
+The `attack_method` could be `random`, `fgsm` (FGSM), `bim` (BIM), `tgsm` (ILCM), `jsma` (JSMA), `carliniL2` (C&W), `carliniL2_highcon` (C&W-highcon) and `carliniL2_specific` (C&W-whitebox).
+
+## Detection of Adversarial Examples
+
+After running the attacking codes, there will be saved files containing the information of crafted adversarial exmaples. To further perform detection between adversarial examples and normal ones, there are three extra steps to do:
+
+First Step: Get the train_logits
+
+```shell
+python others.py --eval_data_path='mnist_dataset/data_train.bin' \
+                               --log_root=models_mnist/resnet32 \
+                               --dataset='mnist' \
+                               --num_gpus=1 \
+                               --num_residual_units=5 \
+                               --mode=kernel_para \
+                               --Optimizer='mom' \
+                               --eval_batch_count=500 \
+                               --RCE_train=True
+```
+
+Second Step: run Matlab_scripts/select_kernel.m
+
+Third Step: run Matlab_scripts/auc_of_roc_RCE.m
